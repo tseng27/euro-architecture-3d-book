@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>€</text></svg>" />
+<title>歐元上的建築｜3D 互動書</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script type="module" crossorigin src="./assets/index-BtGpOJie.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Iy_nkfmZ.css">
+</head>
+<body>
+<canvas id="gl" aria-label="3D 書桌與立體書場景"></canvas>
+<div id="loading">翻開書本中…</div>
+<header id="top">
+  <div class="brand"><b>歐元上的建築</b><span>從紙鈔看歐洲兩千年</span></div>
+  <nav id="tabs" aria-label="課次"></nav>
+</header>
+<div id="ctrl">
+  <div class="seg" id="side" role="group" aria-label="紙鈔正背面">
+    <button data-side="front" class="on">正面・門窗</button><button data-side="back">背面・橋</button>
+  </div>
+  <div class="seg" id="cam" role="group" aria-label="鏡頭">
+    <button data-cam="book">全書</button><button data-cam="text">課文</button><button data-cam="model">模型</button>
+  </div>
+  <button type="button" id="resetCam" class="ghost">重設視角</button>
+</div>
+<div id="spots"></div>
+<div id="tip" hidden><b></b><p></p></div>
+<section id="quiz" aria-live="polite">
+  <div class="qhead">先預測，再掀開</div>
+  <p class="qq"></p>
+  <div class="qopts"></div>
+  <div class="flapwrap"><div class="answer"></div><div class="flap"><span>選好答案，紙片才會掀開 ✋</span></div></div>
+</section>
+<aside id="drawer">
+  <button id="drawerToggle" aria-expanded="true">真實建築 &amp; 紙鈔 ▸</button>
+  <div class="dbody">
+    <h3>點紙鈔看清楚</h3><div id="notes"></div>
+    <h3>真實建築照片</h3><div id="photos"></div>
+    <p class="disc">※ 書中 3D 模型為依各時期特徵繪製的教學示意，並非歐洲央行紙鈔原圖；紙鈔建築本身亦為虛構，不代表任何真實建築。照片來自 Wikimedia Commons，授權如各圖所示。紙鈔樣張 © European Central Bank。</p>
+  </div>
+</aside>
+<div id="hint">左鍵旋轉・右鍵／Shift+左鍵平移・滾輪縮放・← → 換課・F 翻面</div>
+<div id="lightbox" hidden role="dialog" aria-modal="true">
+  <div class="lbin"><img alt="" /><div class="lbcap"></div>
+  <div class="lbbtn"><button data-lb="prev">‹</button><button data-lb="flip">翻面</button><button data-lb="zoom">放大鏡</button><button data-lb="next">›</button><button data-lb="close">關閉 ✕</button></div></div>
+</div>
+</body>
+</html>
